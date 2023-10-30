@@ -1,0 +1,533 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;500;700&family=League+Spartan:wght@700&display=swap");
+
+:root {
+  --paragraph-: #6f7680;
+  --first-ingre: #fafeff;
+  --sec-ingre: #eef9ff;
+  --third-ingre: #cee0f8;
+  --white-col: #ffffff;
+  --headers-col: #263448;
+  --units-color: #2e51da;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+}
+.intro-section__title {
+  font-size: 55px;
+  font-weight: 700;
+  width: 55%;
+  color: var(--headers-col);
+}
+h3,
+h2 {
+  color: var(--headers-col);
+}
+h2 {
+  font-size: 42px;
+}
+.main-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.intro-section {
+  width: 100%;
+  display: flex;
+  position: relative;
+  height: 670px;
+}
+
+.logoWithParagh {
+  padding: 100px;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  row-gap: 75px;
+  height: 100%;
+  background: linear-gradient(
+    0.25turn,
+    var(--first-ingre),
+    var(--sec-ingre),
+    var(--third-ingre)
+  );
+  border-radius: 0 0 45px;
+}
+
+.intro-section__article {
+  width: 60%;
+  height: 100%;
+}
+
+.bmi-calculator {
+  position: absolute;
+  right: 150px;
+  top: 168px;
+  width: 41%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: var(--white-col);
+  height: 400px;
+  padding: 40px;
+  box-shadow: 26px 32px 42px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+#imperial-input {
+  display: none;
+  justify-content: space-around;
+}
+
+.input-font {
+  width: 183px;
+  height: 37px;
+  border-radius: 6px;
+  padding: 20px;
+  border: 1px solid #a0a2a3;
+  outline: none;
+  color: #a6a6ad;
+  font-size: 18px;
+}
+#result-section {
+  display: none;
+}
+
+.bmi-calculator__units,
+.bmi-calculator-input-section-metric {
+  display: flex;
+  justify-content: space-between;
+}
+.bmi-calculator-input-section-metric__input {
+  position: relative;
+}
+.label-s {
+  color: var(--paragraph-);
+}
+.wraper {
+  display: flex;
+  width: 100%;
+}
+.bmi-calculator-input-section-metric__input--unit {
+  position: absolute;
+  top: 28px;
+  right: 60px;
+  color: var(--units-color);
+  font-size: 20px;
+  font-weight: 700;
+  outline: none;
+}
+.article-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px;
+  width: 100%;
+}
+.bmi-calculator__units {
+  width: 50%;
+  font-weight: 600;
+}
+.article-section__image {
+  width: 50%;
+  height: 500px;
+}
+
+.flex-group {
+  width: 40%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 38px;
+  align-items: flex-start;
+}
+.curveOne {
+  margin-left: 400px;
+  margin-top: -50px;
+}
+
+.suggestion-section {
+  padding: 50px;
+  width: 100%;
+  height: 500px;
+}
+.suggestion-list {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  background: linear-gradient(0.25turn, #fdfffe, #f9fdff, #f7faff);
+  align-items: center;
+  justify-content: space-around;
+}
+.label-l,
+.radio-input__radio:hover {
+  cursor: pointer;
+}
+.suggestion-list__item img {
+  width: 64px;
+}
+.suggestion-list__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  width: 33%;
+}
+.suggestion-list__item p {
+  width: 90%;
+}
+.grid-group {
+  display: grid;
+  grid-template-areas:
+    "header header  gender"
+    " curve age  muscle"
+    ".   pregnancy  race";
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 85%;
+  margin-bottom: 90px;
+}
+.card {
+  padding: 30px;
+  width: 100%;
+  box-shadow: 6px 5px 34px 13px rgba(0, 0, 0, 0.1);
+  background-color: var(--white-col);
+  border-radius: 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+}
+.card__header {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.headGrid h2 {
+  margin: 0 0 40px 0;
+}
+.headGrid p {
+  width: 84%;
+}
+.headGrid {
+  grid-area: header;
+  width: 87%;
+}
+.gender {
+  grid-area: gender;
+  height: fit-content;
+}
+
+.rightCurve {
+  grid-area: curve;
+  position: relative;
+  right: -160px;
+}
+
+.age {
+  grid-area: age;
+  margin-left: 35px;
+}
+
+.muscle {
+  grid-area: muscle;
+  margin-left: 50px;
+}
+.pregnancy {
+  grid-area: pregnancy;
+  height: fit-content;
+
+  margin-left: -105px;
+}
+
+.race {
+  grid-area: race;
+  margin-left: -90px;
+  height: fit-content;
+}
+p {
+  color: var(--paragraph-);
+}
+#welcome-section {
+  padding: 10px;
+  background: linear-gradient(0.25turn, #3760f8, #476dfc, #577cff);
+  border-radius: 6px 50px 50px 6px;
+  width: 90%;
+  height: 110px;
+  line-height: 30px;
+}
+.c-white,
+.p-s {
+  color: var(--white-col);
+}
+.p-s {
+  font-size: small;
+}
+
+.unit {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  color: var(--units-color);
+  font-size: 15px;
+  font-weight: 700;
+}
+.wraper {
+  position: relative;
+}
+#height-ft {
+  margin-bottom: 10px;
+}
+#classification {
+  color: var(--white-col);
+  text-align: center;
+}
+
+@media (max-width: 750px) {
+  .intro-section {
+    flex-direction: column;
+    height: 600px;
+    margin-bottom: 160px;
+  }
+  .logoWithParagh {
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding: 29px;
+    row-gap: 23px;
+  }
+  .intro-section__title {
+    font-size: 50px;
+    font-weight: 600;
+    width: 60%;
+  }
+  .intro-section__logo {
+    width: 40px;
+  }
+  .intro-section__article {
+    width: 100%;
+    height: fit-content;
+  }
+  #imperial-input {
+    justify-content: space-between;
+    width: 80%;
+  }
+  #welcome-section {
+    width: 90%;
+  }
+  .bmi-calculator {
+    display: flex;
+    right: 37px;
+    top: 360px;
+    width: 90%;
+  }
+  #metric-input {
+    width: 85%;
+  }
+  .bmi-calculator-input-section-metric__input--unit {
+    top: 8px;
+    right: 11px;
+  }
+
+  .article-section {
+    width: 100%;
+    align-items: flex-start;
+    padding: unset;
+    margin-top: 128px;
+  }
+  .article-section__image {
+    align-self: center;
+    height: unset;
+    margin-left: -58px;
+    width: 55%;
+  }
+  .flex-group {
+    height: unset;
+    row-gap: unset;
+    width: 46%;
+    align-self: center;
+  }
+  .curveOne,
+  .rightCurve {
+    display: none;
+  }
+  h2 {
+    font-size: 31px;
+    margin: 0 0 28px;
+  }
+  .suggestion-section {
+    height: unset;
+    margin: 105px 0;
+    padding: 23px;
+    align-items: center;
+    display: flex;
+  }
+
+  .suggestion-list {
+    flex-direction: column;
+    height: 400px;
+    width: 100%;
+    align-items: unset;
+    justify-content: unset;
+    justify-content: space-around;
+    position: relative;
+    padding-left: 75px;
+  }
+  .suggestion-list__item {
+    width: 100%;
+    row-gap: 7px;
+    margin-left: 30px;
+  }
+  .suggestion-list__item img {
+    left: 20px;
+    position: absolute;
+  }
+  .suggestion-list__item p {
+    width: 96%;
+  }
+
+  .grid-group {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.9fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "header header"
+      "gender age "
+      "muscle pregnancy "
+      "race race";
+  }
+  .headGrid {
+    width: 100%;
+    text-align: center;
+  }
+  .headGrid p {
+    width: 100%;
+  }
+  .card {
+    height: unset;
+    width: unset;
+    display: unset;
+    box-shadow: 15px 28px 22px -3px rgba(0, 0, 0, 0.1);
+  }
+
+  .age,
+  .muscle,
+  .pregnancy,
+  .race {
+    margin-left: 0;
+  }
+  .race {
+    width: 57%;
+    margin: 0 auto;
+  }
+
+  .card p {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .intro-section__title {
+    width: 100%;
+    font-weight: 700;
+    font-size: 45px;
+  }
+  .intro-section__article {
+    line-height: 24px;
+  }
+  .bmi-calculator {
+    height: 560px;
+    right: 13px;
+    top: 470px;
+  }
+  .bmi-calculator__units {
+    width: 97%;
+  }
+  #metric-input {
+    flex-direction: column;
+  }
+  .bmi-calculator-input-section-metric__input {
+    display: flex;
+    flex-direction: column;
+  }
+  .bmi-calculator-input-section-metric__input--unit {
+    top: 28px;
+    right: -15px;
+  }
+  .input-font {
+    width: 240px;
+  }
+  #welcome-section {
+    width: 100%;
+    height: 41%;
+    border-radius: 15px;
+    padding: 15px;
+  }
+  #classification {
+    padding: 32px;
+    font-size: 16px;
+  }
+  #imperial-input {
+    width: 95%;
+    column-gap: 5px;
+  }
+  .article-section {
+    flex-direction: column;
+    margin-top: 330px;
+  }
+
+  .article-section__image {
+    margin-left: unset;
+    width: 100%;
+    height: 370px;
+    margin-bottom: 40px;
+  }
+  .flex-group {
+    width: 92%;
+  }
+  h2 {
+    font-size: 29px;
+  }
+  .flex-group p {
+    line-height: 25px;
+  }
+  .suggestion-list__item img {
+    position: unset;
+  }
+  .suggestion-section {
+    padding: unset;
+  }
+  .suggestion-list {
+    position: unset;
+    padding: unset;
+    justify-content: space-evenly;
+    height: 592px;
+  }
+  .suggestion-list__item p {
+    width: 89%;
+    line-height: 23px;
+  }
+  .grid-group {
+    width: 90%;
+    margin-bottom: unset;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.7fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr;
+    grid-template-areas: "header" "gender" "age" "muscle" "pregnancy" "race";
+    margin-bottom: 100px;
+  }
+  .race {
+    width: unset;
+    margin: unset;
+  }
+}
